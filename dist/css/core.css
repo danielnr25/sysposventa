@@ -1,0 +1,16 @@
+.incorrecto{
+  background: red;
+  color: #fff;
+  padding: 9px;
+  margin-bottom: .3rem;
+  font-size: 1.3rem;
+  line-height: 1.25rem;
+  text-align: center;
+  margin-top: .3rem;
+  border-radius: .35rem;
+}
+
+.custom-swal {
+  width: 600px !important;; 
+  height: 400px !important;; 
+}

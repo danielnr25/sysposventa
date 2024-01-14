@@ -1,5 +1,12 @@
 <?php 
 
+session_start();
+if (!isset($_SESSION['idusuario'])) {
+  if ($_POST['accion'] != 'INICIAR_SESION') {
+    header('Location: index.php');
+  }
+}
+
 class conexionBD
 {
   // Atributos necesarios para la conexion
@@ -18,14 +25,14 @@ class conexionBD
       $this->pdo = new PDO("mysql:host=$this->host;dbname=$this->bd", $this->user, $this->password); // Creamos la conexion
       $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // Para que muestre los errores
       $this->pdo->exec("SET NAMES 'UTF8'"); // Para que se muestren las tildes y caracteres especiales
-      echo "Conectado a la base de datos"; // Mensaje de conexion exitosa
+      //echo "Conectado a la base de datos"; // Mensaje de conexion exitosa
       return $this->pdo; // Retornamos la conexion
     } catch (PDOException $e) {
       echo "Error de conexion a la base de datos: " . $e->getMessage(); // Mensaje de error
     }
   }
 
-  public function cerrarBD()
+  function cerrarBD()
   {
     $this->pdo = null;
   }

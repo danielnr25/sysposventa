@@ -1,3 +1,7 @@
+<?php
+session_start();
+session_destroy();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -7,7 +11,7 @@
         <meta name="author" content="Coderthemes">
 
         <link rel="shortcut icon" href="theme/assets/images/favicon_1.ico">
-
+        <link rel="stylesheet" href="dist/css/core.css" />
         <title>VuderaSoft | Login</title>
 
         <link href="theme/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -36,6 +40,7 @@
                             <i class="md md-account-circle form-control-feedback l-h-34"></i>
                         </div>
                     </div>
+                    <div id='errorusu'></div>
 
                     <div class="form-group">
                         <div class="col-xs-12">
@@ -43,6 +48,8 @@
                             <i class="md md-vpn-key form-control-feedback l-h-34"></i>
                         </div>
                     </div>
+
+                    <div id="errorpass"></div>
 
                     <div class="form-group">
                         <div class="col-xs-12">
@@ -76,6 +83,8 @@
         </div>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="js/usuario.js?rev=<?php echo time(); ?>"></script>
+        <script src="utils/sweetalert.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="theme/assets/js/jquery.min.js"></script>
         <script src="theme/assets/js/bootstrap.min.js"></script>
         <script src="theme/assets/js/detect.js"></script>
@@ -87,7 +96,7 @@
         <script src="theme/assets/js/jquery.nicescroll.js"></script>
         <script src="theme/assets/js/jquery.scrollTo.min.js"></script>
         <script src="theme/assets/js/jquery.core.js"></script>
-        <script src="theme/assets/js/jquery.app.js"></script>
+       
 	
 	  </body>
 </html>
