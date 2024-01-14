@@ -28,18 +28,18 @@
                     <a href="index.html" class="logo-lg"><i class="md md-equalizer"></i> <span>POS VENTA</span> </a>
                 </div>
 
-                <form class="form-horizontal m-t-20" action="index.html">
+                <div class="form-horizontal m-t-20">
 
                     <div class="form-group">
                         <div class="col-xs-12">
-                            <input class="form-control" type="text" required="" placeholder="Usuario">
+                            <input class="form-control" type="text" id="txt_usuario" placeholder="Usuario">
                             <i class="md md-account-circle form-control-feedback l-h-34"></i>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <div class="col-xs-12">
-                            <input class="form-control" type="password" required="" placeholder="Password">
+                            <input class="form-control" type="password" id="txt_contra" placeholder="Password">
                             <i class="md md-vpn-key form-control-feedback l-h-34"></i>
                         </div>
                     </div>
@@ -71,10 +71,11 @@
                             <a href="pages-register.html" class="text-muted">Crear una cuenta</a>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
-
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="js/usuario.js?rev=<?php echo time(); ?>"></script>
         <script src="theme/assets/js/jquery.min.js"></script>
         <script src="theme/assets/js/bootstrap.min.js"></script>
         <script src="theme/assets/js/detect.js"></script>
@@ -85,7 +86,6 @@
         <script src="theme/assets/js/wow.min.js"></script>
         <script src="theme/assets/js/jquery.nicescroll.js"></script>
         <script src="theme/assets/js/jquery.scrollTo.min.js"></script>
-
         <script src="theme/assets/js/jquery.core.js"></script>
         <script src="theme/assets/js/jquery.app.js"></script>
 	
